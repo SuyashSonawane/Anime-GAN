@@ -2,7 +2,6 @@ import torch
 from torchvision.utils import make_grid
 import matplotlib.pyplot as plt
 import random
-import base64
 import streamlit as st
 
 t1 = 0.5
