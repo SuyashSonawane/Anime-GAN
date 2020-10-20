@@ -1,5 +1,4 @@
 import torch
-from torchvision.utils import make_grid
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
@@ -29,7 +28,9 @@ def generateFace(t1, t2, t3):
     fig, ax = plt.subplots(figsize=(3, 3))
     ax.set_xticks([])
     ax.set_yticks([])
-    ax.imshow(make_grid(fake_images.cpu().detach(), nrow=8).permute(1, 2, 0))
+    # print(fake_images.cpu().detach().view)
+    ax.imshow(fake_images.cpu().detach().reshape(3,64,64).permute(1,2,0))
+    # ax.imshow(make_grid(fake_images.cpu().detach(), nrow=8).permute(1, 2, 0))
     return fig
 
 
