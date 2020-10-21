@@ -1,0 +1,12 @@
+body {
+  background-color: #eee;
+}
+
+.fullScreenFrame > div {
+  display: flex;
+  justify-content: center;
+}
+img {
+  width: 80%;
+  margin: auto;
+}
